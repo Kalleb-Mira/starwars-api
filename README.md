@@ -102,7 +102,44 @@ gcloud functions deploy starwars-api \
 
 - Parâmetros via query string
 
+- Frontend
+
+- GitHub pages
+
 ---
+
+## Arquitetura da Solução
+
+┌─────────────┐
+│   Usuário   │
+│  (Browser)  │
+└──────┬──────┘
+       │
+       ▼
+┌────────────────────┐
+│ Frontend (GitHub   │
+│ Pages / HTML + JS)│
+└──────┬─────────────┘
+       │ HTTP Request
+       ▼
+┌─────────────────────────────┐
+│ Google Cloud Functions     │
+│ (Python API - StarWars)    │
+└──────┬────────────────────┘
+       │
+       ▼
+┌────────────────────┐
+│   SWAPI (External)│
+│   swapi.dev       │
+└────────────────────┘
+### Fluxo da Aplicação
+
+1. Usuário acessa o frontend hospedado no GitHub Pages.
+2. O frontend faz requisições HTTP para a API hospedada no Google Cloud Functions.
+3. A API consulta a SWAPI (Star Wars API).
+4. Os dados retornam para a Cloud Function.
+5. A resposta é tratada e enviada ao frontend.
+6. O frontend renderiza as informações na interface.
 
 ## Possíveis melhorias
 
@@ -115,8 +152,6 @@ gcloud functions deploy starwars-api \
 - Testes unitários
 
 - Correlação entre recursos (ex: personagens por filme)
-
-- Frontend
 
 - API Gateway
 
