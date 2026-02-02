@@ -6,6 +6,9 @@ Projeto criado como parte do case técnico para vaga de Desenvolvedor Back End P
 
 ---
 
+## Live
+https://kalleb-mira.github.io/starwars-api/
+
 ##  Tecnologias
 
 - Python 3.10
@@ -34,7 +37,7 @@ Request → Controller → Service → SWAPI → Domain Filters → Response
 
 ---
 
-##  Endpoint público
+## Backend Endpoint público
 https://us-central1-starwars-api-486023.cloudfunctions.net/starwars-api
 
 ##  Parâmetros
