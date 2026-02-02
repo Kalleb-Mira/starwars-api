@@ -23,6 +23,7 @@ https://kalleb-mira.github.io/starwars-api/
 ##  Arquitetura
 
 O projeto foi estruturado seguindo separação de responsabilidades:
+```
 src/
 ├── main.py # Entry point da Cloud Function
 ├── controllers/ # Camada HTTP
@@ -30,7 +31,7 @@ src/
 ├── domain/ # Regras de negócio / filtros
 ├── adapters/ # Cliente HTTP isolado
 └── utils/ # Padronização de respostas
-
+```
 ### Fluxo:
 
 Request → Controller → Service → SWAPI → Domain Filters → Response
