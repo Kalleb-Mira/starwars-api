@@ -33,12 +33,30 @@ function renderResults(items, type) {
       `;
     }
 
-   if (type === "planets") {
+    if (type === "planets") {
       card.innerHTML = `
         <h3>${item.name}</h3>
         <p><strong>População:</strong> ${formatNumber(item.population)}</p>
         <p><strong>Clima:</strong> ${item.climate}</p>
         <p><strong>Terreno:</strong> ${item.terrain}</p>
+      `;
+    }
+
+    if (type === "starships") {
+      card.innerHTML = `
+      <h3>${item.name}<h3>
+      <p><strong>Modelo:</strong> ${item.model}</p>
+      <p><strong>Fabricante:</strong> ${item.manufacturer}</p>
+      <p><strong>Tripulação:</strong> ${item.crew}</p>
+      `;
+    }
+
+    if (type === "films") {
+      card.innerHTML = `
+    <h3>${item.title}</h3>
+    <p><strong>Episódio:</strong> ${item.episode_id}</p>
+    <p><strong>Diretor:</strong> ${item.director}</p>
+    <p><strong>Lançamento:</strong> ${item.release_date}</p>
       `;
     }
 
