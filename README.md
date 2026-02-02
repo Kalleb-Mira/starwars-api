@@ -44,9 +44,9 @@ https://us-central1-starwars-api-486023.cloudfunctions.net/starwars-api
 
 | Parâmetro | Descrição |
 |----------|-----------|
-| type | Recurso da SWAPI (people, planets, films, starships, etc) |
-| search | Busca textual |
-| min_population | Filtro mínimo de população (somente planets) |
+| type | Recurso da SWAPI (pessoas, planetas, filmes, starships, etc) |
+| search | Busca textual (nome, titulo) |
+| min_population | Filtro mínimo de população (somente planetas) |
 
 ---
 
@@ -60,6 +60,10 @@ https://us-central1-starwars-api-486023.cloudfunctions.net/starwars-api
 ?type=planets
 ### Filtro por população
 ?type=planets&min_population=1000000000
+### Naves
+?type=starships
+### Filmes
+?type=films
 
 ---
 
