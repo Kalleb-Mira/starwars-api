@@ -109,7 +109,7 @@ gcloud functions deploy starwars-api \
 ---
 
 ## Arquitetura da Solução
-
+```
 ┌─────────────┐
 │   Usuário   │
 │  (Browser)  │
@@ -132,6 +132,7 @@ gcloud functions deploy starwars-api \
 │   SWAPI (External)│
 │   swapi.dev       │
 └────────────────────┘
+```
 ### Fluxo da Aplicação
 
 1. Usuário acessa o frontend hospedado no GitHub Pages.
