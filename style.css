@@ -40,6 +40,21 @@ button:hover {
   background: #2f7bff;
 }
 
+#loading {
+    color: #ffe81f;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+    animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+
 #result {
   padding: 0 40px;
   display: grid;

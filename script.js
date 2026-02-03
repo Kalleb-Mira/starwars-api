@@ -1,19 +1,20 @@
 const API = "https://us-central1-starwars-api-486023.cloudfunctions.net/starwars-api";
 
-function fetchData() {
+async function fetchData() {
   const type = document.getElementById("type").value;
   const search = document.getElementById("search").value;
 
   let url = `${API}?type=${type}`;
+  if (search) url += `&search=${search}`;
 
-  if (search) {
-    url += `&search=${search}`;
-  }
+  document.getElementById("loading").style.display = "block";
 
-  fetch(url)
-    .then(res => res.json())
-    .then(data => renderResults(data.data.results, type))
-    .catch(err => alert(err));
+  const res = await fetch(url);
+  const data = await res.json();
+
+  document.getElementById("loading").style.display = "none";
+
+  renderResults(data.data.results, type);
 }
 
 function renderResults(items, type) {
